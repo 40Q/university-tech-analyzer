@@ -14,3 +14,9 @@ Bad: https://ucla.edu
 ```
 python3 main.py
 ```
+
+## Export CSV
+Once your `output_json` folder has the exported data, your may run this command to merge them all into a csv file:
+```
+python3 make_csv.py
+```
