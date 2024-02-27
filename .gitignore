@@ -7,3 +7,6 @@ sublist3r_output
 filtered_sublist3r_output
 puredns_output
 json_output
+data.csv
+
+__pycache__
