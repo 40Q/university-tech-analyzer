@@ -15,10 +15,7 @@ cd Sublist3r
 pip install -r requirements.txt
 
 echo "Installing massdns"
-git clone https://github.com/blechschmidt/massdns.git
-cd massdns
-make
-sudo make install
+brew install massdns
 
 echo "Installing puredns"
 go install github.com/d3mondev/puredns/v2@latest
