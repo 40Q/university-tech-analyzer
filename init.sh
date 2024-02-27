@@ -27,14 +27,14 @@ cd wappalyzer
 yarn install
 yarn build
 
-echo "Creating output directory"
-mkdir output_dir
+echo "Creating output directories"
+mkdir sublist3r_output
+mkdir filtered_sublist3r_output
+mkdir puredns_output
+mkdir json_output
 
 echo "Creating files"
 touch input_domains.txt
-touch subdomains.txt
-touch valid_subdomains.txt
-touch output.json
 
 echo "Done!"
 

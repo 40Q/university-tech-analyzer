@@ -1,9 +1,9 @@
 env
-output_dir
 Sublist3r
 wappalyzer
 
 input_domains.txt
-subdomains.txt
-valid_subdomains.txt
-output.json
+sublist3r_output
+filtered_sublist3r_output
+puredns_output
+json_output
