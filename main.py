@@ -76,21 +76,18 @@ def analize_tech(url):
 
 
 def main():
-    # with open(input_domains_file, 'r') as file:
-    #     domains = file.readlines()
+    with open(input_domains_file, 'r') as file:
+        domains = file.readlines()
 
-    # for domain in domains:
-    #     if domain:
-    #         print(f"Finding subdomains for: {domain}")
-    #         subdomains = run_sublist3r(domain)
-    #         print(f"Sublist3r found {len(subdomains)} subdomains.")
+    for domain in domains:
+        if domain:
+            print(f"Finding subdomains for: {domain}")
+            subdomains = run_sublist3r(domain)
+            print(f"Sublist3r found {len(subdomains)} subdomains.")
 
 
-    # print("Validating subdomains...")
-    # validated_subdomains = run_puredns()
-
-    with open(output_valid_subdomains_file, 'r') as file:
-            validated_subdomains = file.readlines()
+    print("Validating subdomains...")
+    validated_subdomains = run_puredns()
 
     for subdomain in validated_subdomains:
         print(f"Analizing {subdomain}")
