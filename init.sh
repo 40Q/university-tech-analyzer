@@ -13,6 +13,7 @@ echo "Installing Sublist3r"
 git clone https://github.com/aboul3la/Sublist3r.git
 cd Sublist3r
 pip install -r requirements.txt
+cd ..
 
 echo "Installing massdns"
 brew install massdns
@@ -26,6 +27,7 @@ git clone git@github.com:tunetheweb/wappalyzer.git
 cd wappalyzer
 yarn install
 yarn build
+cd ..
 
 echo "Creating output directories"
 mkdir sublist3r_output
