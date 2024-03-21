@@ -1,6 +1,7 @@
 env
 Sublist3r
 wappalyzer
+puredns
 
 input_domains.txt
 sublist3r_output
