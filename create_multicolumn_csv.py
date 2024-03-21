@@ -8,13 +8,19 @@ def map_unique_categories_with_id(directory):
         for file in files:
             if file.endswith('.json'):
                 file_path = os.path.join(root, file)
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    data = json.load(f)
-                    for tech in data.get("technologies", []):
-                        for category in tech.get("categories", []):
-                            cat_id = category["id"]
-                            cat_name = category["name"]
-                            categories[cat_id] = cat_name
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        data = json.load(f)
+                        for tech in data.get("technologies", []):
+                            for category in tech.get("categories", []):
+                                cat_id = category["id"]
+                                cat_name = category["name"]
+                                categories[cat_id] = cat_name
+                except json.decoder.JSONDecodeError as e:
+                    print(f"Error decoding JSON from file {file_path}: {e}")
+                    # Optionally, raise an exception or continue to the next file
+                    # raise e
+                    continue
     sorted_categories = sorted(categories.items(), key=lambda x: x[0])
     return sorted_categories
 

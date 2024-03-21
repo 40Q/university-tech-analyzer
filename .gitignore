@@ -8,5 +8,6 @@ filtered_sublist3r_output
 puredns_output
 json_output
 data.csv
+multicolumn-csv.csv
 
 __pycache__
